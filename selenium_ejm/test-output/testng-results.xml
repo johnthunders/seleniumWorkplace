@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28102" started-at="2019-07-03T20:20:40Z" finished-at="2019-07-03T20:21:08Z">
+  <suite name="Default suite" duration-ms="26047" started-at="2019-07-03T20:51:31Z" finished-at="2019-07-03T20:51:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28102" started-at="2019-07-03T20:20:40Z" finished-at="2019-07-03T20:21:08Z">
+    <test name="Default test" duration-ms="26047" started-at="2019-07-03T20:51:31Z" finished-at="2019-07-03T20:51:57Z">
       <class name="selenium_ejm.Test_AutomationEol">
-        <test-method status="PASS" signature="test_example()[pri:0, instance:selenium_ejm.Test_AutomationEol@bae7dc0]" name="test_example" duration-ms="27960" started-at="2019-07-03T20:20:40Z" finished-at="2019-07-03T20:21:08Z">
+        <test-method status="PASS" signature="test_example()[pri:0, instance:selenium_ejm.Test_AutomationEol@bae7dc0]" name="test_example" duration-ms="25886" started-at="2019-07-03T20:51:31Z" finished-at="2019-07-03T20:51:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_example -->
-        <test-method status="PASS" signature="qwerty()[pri:0, instance:selenium_ejm.Test_AutomationEol@bae7dc0]" name="qwerty" is-config="true" duration-ms="125" started-at="2019-07-03T20:21:08Z" finished-at="2019-07-03T20:21:08Z">
+        <test-method status="PASS" signature="qwerty()[pri:0, instance:selenium_ejm.Test_AutomationEol@bae7dc0]" name="qwerty" is-config="true" duration-ms="140" started-at="2019-07-03T20:51:57Z" finished-at="2019-07-03T20:51:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qwerty -->
