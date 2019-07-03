@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.testng.eclipse.launchconfig">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/projects_jlst"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="selenium_ejm"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="projects_jlst"/>
 <listAttribute key="org.testng.eclipse.SUITE_TEST_LIST">
 <listEntry value="/Users/jose.sotomayor/eclipse-workspace/selenium_ejm/testng.xml"/>
 </listAttribute>
