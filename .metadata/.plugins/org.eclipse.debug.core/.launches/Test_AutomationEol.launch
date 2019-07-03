@@ -10,7 +10,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="projects_jlst"/>
 <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
 <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
-<listEntry value="selenium_ejm.Test_AutomationEol"/>
+<listEntry value="selenium_workplace.Test_AutomationEol"/>
 </listAttribute>
 <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
 <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>

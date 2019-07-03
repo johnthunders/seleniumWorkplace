@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium_ejm.Test_AutomationEol">
+      <class name="selenium_workplace.Test_AutomationEol">
         <methods>
-          <include name="qwerty"/>
           <include name="test_example"/>
+          <include name="qwerty"/>
         </methods>
-      </class> <!-- selenium_ejm.Test_AutomationEol -->
+      </class> <!-- selenium_workplace.Test_AutomationEol -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

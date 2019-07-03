@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.ExecuteScript;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -28,7 +29,6 @@ public class Test_AutomationEol {
 		
 		
 		WebElement search = driver.findElement(By.xpath("//*[@id=\"search_query_top\"]"));
-		
 		wait.until(ExpectedConditions.elementToBeClickable(search)).click();
 		
 		driver.findElement(By.xpath("//*[@id=\"search_query_top\"]")).sendKeys("Hola Gobernador");
@@ -104,10 +104,43 @@ public class Test_AutomationEol {
 		driver.findElement(By.xpath("//a[@class='fancybox-item fancybox-close']")).click();
 		Thread.sleep(1000);
 		
-		printed_dress.executeScript("window.scrollBy(250,0)");
+		printed_dress.executeScript("window.scrollBy(0,-300)");
 		Thread.sleep(1000);
 		
+		for(int i=1; i<4; i++){
+			driver.findElement(By.xpath("//a[@class='btn btn-default button-plus product_quantity_up']//span")).click();
+			Thread.sleep(1000);
+		}
 		
+		
+		Select talla = new Select(driver.findElement(By.xpath("//select[@id='group_1']")));
+		
+		talla.selectByVisibleText("S");
+		Thread.sleep(1000L);
+		talla.selectByVisibleText("M");
+		Thread.sleep(1000L);
+		talla.selectByVisibleText("L");
+		Thread.sleep(1000L);
+		talla.selectByVisibleText("M");
+		Thread.sleep(1000L);
+		
+		driver.findElement(By.xpath("//a[@id='wishlist_button']")).click();
+		Thread.sleep(1000L);
+		
+		driver.findElement(By.xpath("//div[@class='fancybox-overlay fancybox-overlay-fixed']")).click();
+		Thread.sleep(1000L);
+		
+		printed_dress.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//a[@class='login']")).click();
+		Thread.sleep(1000);
+		
+		WebElement login = driver.findElement(By.xpath("//input[@id='email_create']"));
+		wait.until(ExpectedConditions.elementToBeClickable(login)).click();
+		
+		driver.findElement(By.xpath("//input[@id='email_create']")).sendKeys("hola01@mail.com");
+		Thread.sleep(1000);
 		
 	}
 	
