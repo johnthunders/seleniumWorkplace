@@ -1,0 +1,29 @@
+package selenium_ejm;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Radiobuttons {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+		WebDriver driver = new ChromeDriver();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		
+		driver.get("http://www.echoecho.com/htmlforms10.htm");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Cheese']")));
+		
+		driver.findElement(By.xpath("//input[@value='Cheese']")).click();
+		driver.quit();
+		
+		
+		
+		
+	}
+	
+}

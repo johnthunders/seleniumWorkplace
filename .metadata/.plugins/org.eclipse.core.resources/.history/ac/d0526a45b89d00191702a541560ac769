@@ -1,0 +1,55 @@
+package selenium_ejm;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+public class Test_AutomationEol {
+	
+	WebDriver driver =new ChromeDriver();
+	@Test
+	public void test_example() throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        driver.manage().window().setSize(new Dimension(500,800));
+        
+		driver.get("http://automationpractice.com/index.php");
+		
+		
+		WebElement search = driver.findElement(By.xpath("//*[@id=\"search_query_top\"]"));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(search)).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"search_query_top\"]")).sendKeys("Hola Gobernador");
+		Thread.sleep(3000);
+        
+		driver.findElement(By.xpath("//button[@name='submit_search']")).click();
+		Thread.sleep(3000);
+		
+		WebElement boton_buscar = driver.findElement(By.xpath("//div[@class='cat-title']"));
+		wait.until(ExpectedConditions.elementToBeClickable(boton_buscar)).click();
+		
+		
+		for(int i=1; i<6; i++){
+			
+			driver.findElement(By.xpath("//div[@class='cat-title']")).click();
+			Thread.sleep(1000);
+			
+		}
+		
+	}
+	
+	@AfterTest
+	private void qwerty() {
+		// TODO Auto-generated method stub
+		//driver.quit();
+	}
+
+}

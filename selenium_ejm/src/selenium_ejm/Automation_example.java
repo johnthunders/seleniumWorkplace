@@ -1,0 +1,43 @@
+package selenium_ejm;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+
+public class Automation_example {
+	
+	WebDriver driver =new ChromeDriver();
+	@Test
+	public void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        
+		driver.get("http://automationpractice.com/index.php");
+		
+		WebElement search = driver.findElement(By.xpath("//*[@id=\"search_query_top\"]"));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(search)).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"search_query_top\"]")).sendKeys("Hola Gobernador");
+		Thread.sleep(3000);
+        
+		driver.findElement(By.xpath("//button[@name='submit_search']")).click();
+		Thread.sleep(3000);
+		
+	}
+	
+	@AfterTest
+	private void qwerty() {
+		// TODO Auto-generated method stub
+		
+		driver.quit();
+	}
+	
+
+}

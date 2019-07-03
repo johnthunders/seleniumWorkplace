@@ -1,0 +1,32 @@
+package selenium_ejm;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AutoSuggestive {
+	public static void main(String[] args) throws InterruptedException {
+	
+		System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.makemytrip.com/");
+		
+		driver.findElement(By.cssSelector("div.bgGradient div.widgetSection.appendBottom40 div.fsw div.fsw_inner:nth-child(1) div.fsw_inputBox.searchCity.inactiveWidget:nth-child(1) > label:nth-child(1)")).click();
+		Thread.sleep(1000L);
+		WebElement s = driver.findElement(By.xpath("//input[contains(@placeholder,'From')]")).clear();
+		s.sendKeys("mumb");
+		s.sendKeys(Keys.ENTER);
+		Thread.sleep(1000L);
+		
+		WebElement d = driver.findElement(By.cssSelector("div.bgGradient div.widgetSection.appendBottom40 div.fsw.widgetOpen div.fsw_inner:nth-child(1) div.fsw_inputBox.searchCity.inactiveWidget.activeWidget:nth-child(1) div.hsw_autocomplePopup.autoSuggestPlugin div.react-autosuggest__container.react-autosuggest__container--open div.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open div.react-autosuggest__section-container.react-autosuggest__section-container--first ul.react-autosuggest__suggestions-list li.react-autosuggest__suggestion:nth-child(2) > div.makeFlex.hrtlCenter"));
+		Thread.sleep(1000L);
+		d.sendKeys("bangko");
+		driver.findElement(By.cssSelector("div.bgGradient div.widgetSection.appendBottom40 div.fsw.widgetOpen div.fsw_inner.interNational:nth-child(1) div.fsw_inputBox.searchToCity.inactiveWidget.activeWidget:nth-child(3) div.hsw_autocomplePopup.autoSuggestPlugin div.react-autosuggest__container.react-autosuggest__container--open div.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open div.react-autosuggest__section-container.react-autosuggest__section-container--first:nth-child(1) ul.react-autosuggest__suggestions-list li.react-autosuggest__suggestion.react-autosuggest__suggestion--first:nth-child(1) div.makeFlex.hrtlCenter > div.calc60")).click();
+		Thread.sleep(1000L);
+		
+		
+	}
+}
+

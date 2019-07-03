@@ -1,0 +1,21 @@
+package selenium_ejm;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Radiobuttons {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.echoecho.com/htmlforms10.htm");
+		
+		
+		driver.findElement(By.xpath("//input[@value='Cheese']")).click();
+		driver.quit();
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+package selenium_ejm;
+
+import org.testng.annotations.Test;
+
+public class Test_AutomationEol {
+  @Test
+  public void f() {
+  }
+}

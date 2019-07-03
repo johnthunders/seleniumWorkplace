@@ -1,0 +1,44 @@
+package selenium_ejm;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class First_WebdriverClass {
+public static void main(String[] args) {
+
+System.setProperty("webdriver.chrome.marionette","/usr/local/bin");
+WebDriver driver = new ChromeDriver();
+
+
+System.setProperty("webdriver.chrome.driver", "C:\\selenium-java-2.35.0\\chromedriver_win32_2.2\\chromedriver.exe");
+
+WebDriver driver = new ChromeDriver(); 
+driver.get("http://www.google.com"); 
+WebElement element = driver.findElement(By.name("q"));
+element.sendKeys("Cheese!");
+element.submit();
+
+
+
+
+
+String baseUrl = "http://demo.guru99.com/selenium/newtours/";
+
+
+
+String expectedTitle = "Welcome: Mercury Tours";
+String actualTitle = "";
+driver.get(baseUrl);
+
+actualTitle = driver.getTitle();
+
+if (actualTitle.contentEquals(expectedTitle)){
+System.out.println("Test Passed!");
+} else {
+System.out.println("Test Failed");
+}
+//Cerrar firefox
+driver.close();
+}
+}
