@@ -72,8 +72,7 @@ public class Test_AutomationEol {
 		Thread.sleep(3000);
 		
 		JavascriptExecutor jsScrollDown = (JavascriptExecutor) driver;
-		jsScrollDown.executeScript("window.scrollBy(0,1000)");
-		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,1000)");
 		
 		
 		
